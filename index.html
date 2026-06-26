@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Micah Cyber Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+
+    <main class="terminal">
+        <header>
+            <div>
+                <h1>MICAH CYBER LAB v1.0</h1>
+                <p>Localhost Security Dashboard</p>
+            </div>
+            <div id="clock">00:00:00</div>
+        </header>
+
+        <section class="status-grid">
+            <div>[OK] Ubuntu VM Online</div>
+            <div>[OK] Apache Running</div>
+            <div>[OK] VS Code Installed</div>
+            <div>[OK] Nmap Ready</div>
+        </section>
+
+        <section class="buttons">
+    <button onclick="runCommand('system')">[1] System Info</button>
+    <button onclick="runCommand('disk')">[2] Disk Usage</button>
+    <button onclick="runCommand('memory')">[3] Memory Usage</button>
+    <button onclick="runCommand('uptime')">[4] Uptime</button>
+    <button onclick="runCommand('ip')">[5] Network Interfaces</button>
+    <button onclick="runCommand('ports')">[6] Open Ports</button>
+    <button onclick="runCommand('nmap')">[7] Nmap Localhost</button>
+</section>
+
+        <pre id="output">micah@cyberlab:~$ <span class="cursor">_</span></pre>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
